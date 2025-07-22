@@ -1,45 +1,87 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VEXOR - Plataforma de Cursos</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VEXOR Cursos</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff;
+    }
+    header {
+      background-color: #1e1e1e;
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #ffffff;
+      border-bottom: 2px solid #ff9900;
+    }
+    .container {
+      padding: 30px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .curso {
+      background-color: #1f1f1f;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 153, 0, 0.1);
+      border: 1px solid #333;
+    }
+    .curso h3 {
+      margin-top: 0;
+      color: #ff9900;
+    }
+    .botao {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff9900;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>VEXOR</h1>
-    <p>Bem-vindo à sua plataforma profissional de cursos</p>
+    VEXOR Cursos Profissionais
   </header>
 
-  <section class="cursos">
-    <h2>Cursos Disponíveis</h2>
-    
+  <div class="container">
     <div class="curso">
-      <h3>Curso de Afiliado</h3>
-      <p>Preço: R$30,00</p>
-      <button onclick="comprar('Curso de Afiliado')">Comprar</button>
+      <h3>Curso de Frontend</h3>
+      <p>Aprenda HTML, CSS e JavaScript do zero e crie interfaces modernas.</p>
+      <a href="#" class="botao">Ver curso</a>
     </div>
 
     <div class="curso">
-      <h3>Curso de Marketing Digital</h3>
-      <p>Preço: R$40,00</p>
-      <button onclick="comprar('Curso de Marketing Digital')">Comprar</button>
+      <h3>Curso de Backend</h3>
+      <p>Domine Node.js, MongoDB e crie seu próprio servidor profissional.</p>
+      <a href="#" class="botao">Ver curso</a>
     </div>
 
     <div class="curso">
-      <h3>Curso de Edição de Vídeos</h3>
-      <p>Preço: R$35,00</p>
-      <button onclick="comprar('Curso de Edição de Vídeos')">Comprar</button>
+      <h3>Curso de Criação de Bots para Discord</h3>
+      <p>Construa bots com comandos, painéis de ajuda, moderação e mais.</p>
+      <a href="#" class="botao">Ver curso</a>
     </div>
-  </section>
+  </div>
 
-  <section class="mensagem" id="mensagem"></section>
-
-  <script>
-    function comprar(curso) {
-      document.getElementById("mensagem").innerHTML = `<p>Você escolheu o <strong>${curso}</strong>.<br>Insira seu CPF para continuar:</p><input type="text" placeholder="Digite seu CPF">`;
-    }
-  </script>
+  <footer>
+    © 2025 VEXOR • Plataforma de cursos por Vitor Eduardo (Weny)
+  </footer>
 </body>
 </html>
