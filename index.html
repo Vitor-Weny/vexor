@@ -3,58 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VEXOR | Plataforma de Cursos</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>VEXOR - Plataforma de Cursos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #0f0f0f;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      text-align: center;
+    }
+    header {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 40px;
+      color: #00ffff;
+    }
+    .btn {
+      display: block;
+      width: 300px;
+      margin: 10px auto;
+      padding: 15px;
+      background-color: #1a1a1a;
+      border: 2px solid #00ffff;
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s;
+    }
+    .btn:hover {
+      background-color: #00ffff;
+      color: #000;
+      transform: scale(1.05);
+    }
+    footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
 </head>
-<body class="dark-mode">
-  <header>
-    <h1>🎓 VEXOR - Plataforma Profissional de Cursos</h1>
-    <p>Aprenda as tecnologias mais usadas no mercado com cursos 100% online.</p>
-  </header>
+<body>
+  <header>VEXOR</header>
 
-  <main class="cursos">
-    <section class="curso">
-      <h2>Curso Profissional de Backend</h2>
-      <p>Domine o desenvolvimento backend com tecnologias reais:</p>
-      <ul>
-        <li>Node.js e Express</li>
-        <li>MongoDB e banco de dados</li>
-        <li>APIs RESTful e autenticação</li>
-        <li>Deploy de servidor</li>
-      </ul>
-      <p><strong>Preço: R$ 30,00</strong></p>
-      <a class="botao" href="backend.html">Ver curso</a>
-    </section>
+  <a class="btn" href="frontend.html">Curso de Frontend</a>
+  <a class="btn" href="backend.html">Curso de Backend</a>
+  <a class="btn" href="uiux.html">Curso de UI/UX</a>
+  <a class="btn" href="inteligencia.html">Curso de IA</a>
+  <a class="btn" href="anuncios.html">Curso de Anúncios</a>
 
-    <section class="curso">
-      <h2>Curso Profissional de Frontend</h2>
-      <p>Aprenda a construir interfaces modernas com:</p>
-      <ul>
-        <li>HTML5, CSS3 e JavaScript</li>
-        <li>Responsividade e UI/UX</li>
-        <li>Frameworks modernos como React</li>
-        <li>Boas práticas de frontend</li>
-      </ul>
-      <p><strong>Preço: R$ 30,00</strong></p>
-      <a class="botao" href="frontend.html">Ver curso</a>
-    </section>
-
-    <section class="curso">
-      <h2>Curso Completo de Fullstack</h2>
-      <p>Do zero ao avançado em desenvolvimento web:</p>
-      <ul>
-        <li>Frontend + Backend integrados</li>
-        <li>Projetos reais</li>
-        <li>MongoDB + React + Node.js</li>
-        <li>Hospedagem e deploy completo</li>
-      </ul>
-      <p><strong>Preço: R$ 50,00</strong></p>
-      <a class="botao" href="fullstack.html">Ver curso</a>
-    </section>
-  </main>
+  <a class="btn" href="https://github.com/seuusuario">Plataforma usada</a>
+  <a class="btn" onclick="alert('Meu Discord: wenydev');">Contato</a>
 
   <footer>
-    <p>&copy; 2025 VEXOR Cursos. Todos os direitos reservados.</p>
+    &copy; 2025 VEXOR - Todos os direitos reservados
   </footer>
 </body>
 </html>
