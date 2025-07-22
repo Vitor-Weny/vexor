@@ -7,166 +7,127 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
       background-color: #0d1117;
-      color: #f0f6fc;
+      color: #ffffff;
     }
 
     header {
       background-color: #161b22;
       padding: 20px;
       text-align: center;
+      border-bottom: 1px solid #30363d;
     }
 
     header h1 {
       margin: 0;
-      font-size: 2.5em;
+      font-size: 2.5rem;
       color: #58a6ff;
     }
 
-    .buttons {
-      margin-top: 10px;
-    }
-
-    .buttons button {
-      background-color: #238636;
-      border: none;
-      color: white;
-      padding: 10px 16px;
-      margin: 5px;
-      font-size: 14px;
-      cursor: pointer;
-      border-radius: 6px;
-    }
-
-    .buttons button:hover {
-      background-color: #2ea043;
-    }
-
-    .container {
-      padding: 40px 20px;
+    .container-cursos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
     }
 
-    .card {
-      background-color: #161b22;
-      border: 1px solid #30363d;
-      border-radius: 12px;
-      padding: 24px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      text-align: center;
+    .curso {
+      background-color: #21262d;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00000055;
+      transition: transform 0.2s ease;
     }
 
-    .card h2 {
+    .curso:hover {
+      transform: scale(1.03);
+    }
+
+    .curso h3 {
+      margin-top: 0;
       color: #58a6ff;
     }
 
-    .card ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .card li::before {
-      content: "✔ ";
-      color: #3fb950;
-    }
-
-    .price {
-      margin: 10px 0;
-      font-weight: bold;
-      font-size: 18px;
-      color: #f0f6fc;
-    }
-
-    .buy-btn {
-      background-color: #1f6feb;
+    .botao-comprar {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #238636;
       color: white;
-      padding: 10px 16px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 14px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.2s ease;
     }
 
-    .buy-btn:hover {
-      background-color: #388bfd;
+    .botao-comprar:hover {
+      background-color: #2ea043;
     }
 
     footer {
       text-align: center;
       padding: 20px;
-      background-color: #161b22;
       color: #8b949e;
+      background-color: #161b22;
+      border-top: 1px solid #30363d;
     }
 
-    a {
-      color: #58a6ff;
-      text-decoration: none;
-    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
 
-    a:hover {
-      text-decoration: underline;
+      .curso {
+        padding: 15px;
+      }
     }
-
   </style>
 </head>
 <body>
-
   <header>
-    <h1>VEXOR - Plataforma de Cursos</h1>
-    <div class="buttons">
-      <button onclick="alert('Discord: weny_vexor')">Contato (Discord)</button>
-      <button onclick="window.open('https://github.com/vitoreduardoalvesvitorello/vexor')">Plataforma usada</button>
-      <button onclick="alert('Você ainda não comprou nenhum curso.')">Minhas Compras</button>
-    </div>
+    <h1>VEXOR Cursos</h1>
   </header>
 
-  <div class="container">
-    <div class="card">
-      <h2>Curso de Backend</h2>
-      <p>Domine Node.js com projetos reais:</p>
-      <ul>
-        <li>Node.js e Express</li>
-        <li>MongoDB e banco de dados</li>
-        <li>APIs RESTful</li>
-        <li>Autenticação e deploy</li>
-      </ul>
-      <p class="price">Preço: R$ 30,00</p>
-      <button class="buy-btn" onclick="window.location.href='backend.html'">Comprar agora</button>
+  <div class="container-cursos">
+    <div class="curso">
+      <h3>Curso de Afiliado</h3>
+      <p>Aprenda como lucrar como afiliado digital e iniciar no marketing de afiliados.</p>
+      <a href="afiliado.html" class="botao-comprar">Ver Curso</a>
     </div>
-
-    <div class="card">
-      <h2>Curso de Frontend</h2>
-      <p>Aprenda a construir interfaces incríveis:</p>
-      <ul>
-        <li>HTML, CSS e JavaScript</li>
-        <li>React moderno</li>
-        <li>Responsividade</li>
-        <li>Design atrativo</li>
-      </ul>
-      <p class="price">Preço: R$ 25,00</p>
-      <button class="buy-btn" onclick="window.location.href='frontend.html'">Comprar agora</button>
+    <div class="curso">
+      <h3>Curso de Backend</h3>
+      <p>Domine Node.js, MongoDB e crie aplicações robustas com backend real.</p>
+      <a href="backend.html" class="botao-comprar">Ver Curso</a>
     </div>
-
-    <div class="card">
-      <h2>Curso de Inteligência Artificial</h2>
-      <p>Entre no mundo da IA com Python:</p>
-      <ul>
-        <li>Introdução ao Machine Learning</li>
-        <li>Redes Neurais</li>
-        <li>Chatbots e automações</li>
-        <li>Projetos reais</li>
-      </ul>
-      <p class="price">Preço: R$ 35,00</p>
-      <button class="buy-btn" onclick="window.location.href='ia.html'">Comprar agora</button>
+    <div class="curso">
+      <h3>Curso de Design</h3>
+      <p>Aprenda design gráfico e UI/UX na prática com projetos reais e profissionais.</p>
+      <a href="design.html" class="botao-comprar">Ver Curso</a>
+    </div>
+    <div class="curso">
+      <h3>Curso de Edição</h3>
+      <p>Aprenda a editar vídeos para TikTok, Reels e YouTube com qualidade profissional.</p>
+      <a href="edicao.html" class="botao-comprar">Ver Curso</a>
+    </div>
+    <div class="curso">
+      <h3>Curso de Frontend</h3>
+      <p>Crie sites modernos com HTML, CSS, JavaScript e frameworks como React.</p>
+      <a href="frontend.html" class="botao-comprar">Ver Curso</a>
+    </div>
+    <div class="curso">
+      <h3>Curso de IA</h3>
+      <p>Aprenda a usar Inteligência Artificial para criar projetos, automatizar tarefas e inovar.</p>
+      <a href="ia.html" class="botao-comprar">Ver Curso</a>
+    </div>
+    <div class="curso">
+      <h3>Curso de Marketing</h3>
+      <p>Domine estratégias de tráfego pago e orgânico para alavancar negócios digitais.</p>
+      <a href="marketing.html" class="botao-comprar">Ver Curso</a>
     </div>
   </div>
 
   <footer>
-    <p>© 2025 VEXOR. Todos os direitos reservados.</p>
+    © 2025 VEXOR. Todos os direitos reservados.
   </footer>
-
 </body>
 </html>
