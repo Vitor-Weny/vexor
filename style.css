@@ -44,3 +44,17 @@ button:hover {
   margin-top: 2rem;
   font-size: 1.2rem;
 }
+.cursos-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+  gap: 20px;
+  padding: 20px;
+}
+
+.curso {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
