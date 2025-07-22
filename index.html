@@ -1,115 +1,96 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VEXOR Cursos</title>
+  <title>VEXOR - Plataforma de Cursos</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      color: #000000;
+      background: #0f0f0f;
+      color: #fff;
+      text-align: center;
     }
 
     header {
-      background-color: #000000;
-      color: #ffffff;
-      padding: 20px;
-      text-align: center;
+      padding: 40px 20px 20px;
     }
 
     h1 {
+      font-size: 3em;
       margin: 0;
-      font-size: 2em;
     }
 
-    .container-cursos {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      padding: 40px;
+    img {
+      margin-top: 20px;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
     }
 
-    .curso {
-      background-color: #1e1e1e;
+    .buttons {
+      margin: 40px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    .buttons a {
+      background: #ffffff10;
+      padding: 15px 30px;
+      border-radius: 12px;
       color: white;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .curso h3 {
-      margin-top: 0;
-    }
-
-    .botao-comprar {
-      display: inline-block;
-      margin-top: 15px;
-      background-color: #ffffff;
-      color: #000000;
-      padding: 10px 20px;
-      border-radius: 5px;
       text-decoration: none;
+      transition: 0.3s;
       font-weight: bold;
-      transition: background-color 0.3s;
+      width: 260px;
     }
 
-    .botao-comprar:hover {
-      background-color: #e0e0e0;
+    .buttons a:hover {
+      background: #ffffff30;
     }
 
-    @media (max-width: 900px) {
-      .container-cursos {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    .footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #888;
     }
 
-    @media (max-width: 600px) {
-      .container-cursos {
-        grid-template-columns: 1fr;
+    @media (min-width: 600px) {
+      .buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
       }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>VEXOR Cursos</h1>
-    <p>Transforme sua carreira com nossos cursos online!</p>
+    <h1>VEXOR</h1>
+    <p>Plataforma profissional de cursos</p>
+    <img src="https://avatars.githubusercontent.com/u/170390677?v=4" alt="Foto de perfil GitHub"/>
   </header>
 
-  <div class="container-cursos">
-    <div class="curso">
-      <h3>Curso de Afiliado</h3>
-      <p>Aprenda como lucrar como afiliado digital e iniciar no marketing de afiliados.</p>
-      <a href="afiliado.html" class="botao-comprar">Comprar</a>
-    </div>
-    <div class="curso">
-      <h3>Curso de Backend</h3>
-      <p>Domine Node.js, MongoDB e crie aplicações robustas com backend real.</p>
-      <a href="backend.html" class="botao-comprar">Comprar</a>
-    </div>
-    <div class="curso">
-      <h3>Curso de Design</h3>
-      <p>Aprenda design gráfico e UI/UX na prática com projetos reais e profissionais.</p>
-      <a href="design.html" class="botao-comprar">Comprar</a>
-    </div>
-    <div class="curso">
-      <h3>Curso de Edição</h3>
-      <p>Aprenda a editar vídeos para TikTok, Reels e YouTube com qualidade profissional.</p>
-      <a href="edicao.html" class="botao-comprar">Comprar</a>
-    </div>
-    <div class="curso">
-      <h3>Curso de Frontend</h3>
-      <p>Crie sites modernos com HTML, CSS, JavaScript e frameworks como React.</p>
-      <a href="frontend.html" class="botao-comprar">Comprar</a>
-    </div>
-    <div class="curso">
-      <h3>Curso de Marketing</h3>
-      <p>Domine estratégias de tráfego pago e orgânico para alavancar negócios digitais.</p>
-      <a href="marketing.html" class="botao-comprar">Comprar</a>
-    </div>
+  <section class="buttons">
+    <a href="frontend.html">Curso de Frontend</a>
+    <a href="backend.html">Curso de Backend</a>
+    <a href="design.html">Curso de Design</a>
+    <a href="marketing.html">Curso de Marketing</a>
+    <a href="edicao.html">Curso de Edição</a>
+    <a href="afiliado.html">Curso de Afiliado</a>
+    <a onclick="alert('📩 Meu Discord: weny.dev')" style="cursor:pointer;">Contato</a>
+    <a href="https://github.com/Vitor-Weny/vexor" target="_blank">Plataforma usada: GitHub</a>
+  </section>
+
+  <div class="footer">
+    Estado: Rondônia | Cidade: Ariquemes
   </div>
+
 </body>
 </html>
