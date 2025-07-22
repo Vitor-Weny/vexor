@@ -1,96 +1,60 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VEXOR - Plataforma de Cursos</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: #fff;
-      text-align: center;
-    }
-
-    header {
-      padding: 40px 20px 20px;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-
-    img {
-      margin-top: 20px;
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
-      object-fit: cover;
-    }
-
-    .buttons {
-      margin: 40px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      align-items: center;
-    }
-
-    .buttons a {
-      background: #ffffff10;
-      padding: 15px 30px;
-      border-radius: 12px;
-      color: white;
-      text-decoration: none;
-      transition: 0.3s;
-      font-weight: bold;
-      width: 260px;
-    }
-
-    .buttons a:hover {
-      background: #ffffff30;
-    }
-
-    .footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #888;
-    }
-
-    @media (min-width: 600px) {
-      .buttons {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-    }
-  </style>
+  <title>VEXOR | Plataforma de Cursos</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-
+<body class="dark-mode">
   <header>
-    <h1>VEXOR</h1>
-    <p>Plataforma profissional de cursos</p>
-    <img src="https://avatars.githubusercontent.com/u/170390677?v=4" alt="Foto de perfil GitHub"/>
+    <h1>🎓 VEXOR - Plataforma Profissional de Cursos</h1>
+    <p>Aprenda as tecnologias mais usadas no mercado com cursos 100% online.</p>
   </header>
 
-  <section class="buttons">
-    <a href="frontend.html">Curso de Frontend</a>
-    <a href="backend.html">Curso de Backend</a>
-    <a href="design.html">Curso de Design</a>
-    <a href="marketing.html">Curso de Marketing</a>
-    <a href="edicao.html">Curso de Edição</a>
-    <a href="afiliado.html">Curso de Afiliado</a>
-    <a onclick="alert('📩 Meu Discord: weny.dev')" style="cursor:pointer;">Contato</a>
-    <a href="https://github.com/Vitor-Weny/vexor" target="_blank">Plataforma usada: GitHub</a>
-  </section>
+  <main class="cursos">
+    <section class="curso">
+      <h2>Curso Profissional de Backend</h2>
+      <p>Domine o desenvolvimento backend com tecnologias reais:</p>
+      <ul>
+        <li>Node.js e Express</li>
+        <li>MongoDB e banco de dados</li>
+        <li>APIs RESTful e autenticação</li>
+        <li>Deploy de servidor</li>
+      </ul>
+      <p><strong>Preço: R$ 30,00</strong></p>
+      <a class="botao" href="backend.html">Ver curso</a>
+    </section>
 
-  <div class="footer">
-    Estado: Rondônia | Cidade: Ariquemes
-  </div>
+    <section class="curso">
+      <h2>Curso Profissional de Frontend</h2>
+      <p>Aprenda a construir interfaces modernas com:</p>
+      <ul>
+        <li>HTML5, CSS3 e JavaScript</li>
+        <li>Responsividade e UI/UX</li>
+        <li>Frameworks modernos como React</li>
+        <li>Boas práticas de frontend</li>
+      </ul>
+      <p><strong>Preço: R$ 30,00</strong></p>
+      <a class="botao" href="frontend.html">Ver curso</a>
+    </section>
 
+    <section class="curso">
+      <h2>Curso Completo de Fullstack</h2>
+      <p>Do zero ao avançado em desenvolvimento web:</p>
+      <ul>
+        <li>Frontend + Backend integrados</li>
+        <li>Projetos reais</li>
+        <li>MongoDB + React + Node.js</li>
+        <li>Hospedagem e deploy completo</li>
+      </ul>
+      <p><strong>Preço: R$ 50,00</strong></p>
+      <a class="botao" href="fullstack.html">Ver curso</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 VEXOR Cursos. Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
