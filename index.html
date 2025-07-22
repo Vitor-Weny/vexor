@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VEXOR - Plataforma de Cursos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>VEXOR</h1>
+    <p>Bem-vindo à sua plataforma profissional de cursos</p>
+  </header>
+
+  <section class="cursos">
+    <h2>Cursos Disponíveis</h2>
+    
+    <div class="curso">
+      <h3>Curso de Afiliado</h3>
+      <p>Preço: R$30,00</p>
+      <button onclick="comprar('Curso de Afiliado')">Comprar</button>
+    </div>
+
+    <div class="curso">
+      <h3>Curso de Marketing Digital</h3>
+      <p>Preço: R$40,00</p>
+      <button onclick="comprar('Curso de Marketing Digital')">Comprar</button>
+    </div>
+
+    <div class="curso">
+      <h3>Curso de Edição de Vídeos</h3>
+      <p>Preço: R$35,00</p>
+      <button onclick="comprar('Curso de Edição de Vídeos')">Comprar</button>
+    </div>
+  </section>
+
+  <section class="mensagem" id="mensagem"></section>
+
+  <script>
+    function comprar(curso) {
+      document.getElementById("mensagem").innerHTML = `<p>Você escolheu o <strong>${curso}</strong>.<br>Insira seu CPF para continuar:</p><input type="text" placeholder="Digite seu CPF">`;
+    }
+  </script>
+</body>
+</html>
