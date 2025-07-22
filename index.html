@@ -9,184 +9,107 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background-color: #ffffff;
-      color: #333;
+      color: #000000;
     }
 
     header {
-      background-color: #ff9900;
+      background-color: #000000;
+      color: #ffffff;
       padding: 20px;
       text-align: center;
-      font-size: 28px;
-      font-weight: bold;
-      color: #fff;
     }
 
-    .container {
-      padding: 30px 20px;
-      max-width: 1200px;
-      margin: auto;
+    h1 {
+      margin: 0;
+      font-size: 2em;
     }
 
-    .grade-cursos {
+    .container-cursos {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
+      padding: 40px;
     }
 
     .curso {
-      background-color: #f9f9f9;
+      background-color: #1e1e1e;
+      color: white;
+      border-radius: 10px;
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-      border: 1px solid #ddd;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
     .curso h3 {
       margin-top: 0;
-      color: #ff9900;
     }
 
-    .botao {
+    .botao-comprar {
       display: inline-block;
+      margin-top: 15px;
+      background-color: #ffffff;
+      color: #000000;
       padding: 10px 20px;
-      background-color: #ff9900;
-      color: white;
+      border-radius: 5px;
       text-decoration: none;
-      border-radius: 8px;
       font-weight: bold;
-      margin-top: 10px;
-      align-self: flex-start;
+      transition: background-color 0.3s;
     }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 14px;
-      color: #777;
+    .botao-comprar:hover {
+      background-color: #e0e0e0;
+    }
+
+    @media (max-width: 900px) {
+      .container-cursos {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container-cursos {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <header>
-    VEXOR Cursos Profissionais
+    <h1>VEXOR Cursos</h1>
+    <p>Transforme sua carreira com nossos cursos online!</p>
   </header>
 
-  <div class="container">
-    <div class="grade-cursos">
-      <div class="curso">
-        <h3>Curso de Frontend</h3>
-        <p>Aprenda HTML, CSS e JavaScript do zero e crie interfaces modernas.</p>
-        <a href="#" class="botao">Ver curso</a>
-      </div>
-
-      <div class="curso">
-        <h3>Curso de Backend</h3>
-        <p>Domine Node.js, MongoDB e crie seu próprio servidor profissional.</p>
-        <a href="#" class="botao">Ver curso</a>
-      </div>
-
-      <div class="curso">
-        <h3>Curso de Bots para Discord</h3>
-        <p>Construa bots com comandos, painéis, moderação e IA embutida.</p>
-        <a href="#" class="botao">Ver curso</a>
-      </div>
-
-      <div class="curso">
-        <h3>Curso de Afiliado</h3>
-        <p>Aprenda a vender produtos digitais como afiliado e ganhar comissões.</p>
-        <a href="#" class="botao">Ver curso</a>
-      </div>
-
-      <div class="curso">
-        <h3>Curso de UI/UX Design</h3>
-        <p>Domine a criação de interfaces incríveis e foco na experiência do usuário.</p>
-        <a href="#" class="botao">Ver curso</a>
-      </div>
-
-      <div class="curso">
-        <h3>Curso de Marketing Digital</h3>
-        <p>Aprenda estratégias para divulgar e escalar seus produtos online.</p>
-        <a href="#" class="botao">Ver curso</a>
-      </div>
+  <div class="container-cursos">
+    <div class="curso">
+      <h3>Curso de Afiliado</h3>
+      <p>Aprenda como lucrar como afiliado digital e iniciar no marketing de afiliados.</p>
+      <a href="afiliado.html" class="botao-comprar">Comprar</a>
+    </div>
+    <div class="curso">
+      <h3>Curso de Backend</h3>
+      <p>Domine Node.js, MongoDB e crie aplicações robustas com backend real.</p>
+      <a href="backend.html" class="botao-comprar">Comprar</a>
+    </div>
+    <div class="curso">
+      <h3>Curso de Design</h3>
+      <p>Aprenda design gráfico e UI/UX na prática com projetos reais e profissionais.</p>
+      <a href="design.html" class="botao-comprar">Comprar</a>
+    </div>
+    <div class="curso">
+      <h3>Curso de Edição</h3>
+      <p>Aprenda a editar vídeos para TikTok, Reels e YouTube com qualidade profissional.</p>
+      <a href="edicao.html" class="botao-comprar">Comprar</a>
+    </div>
+    <div class="curso">
+      <h3>Curso de Frontend</h3>
+      <p>Crie sites modernos com HTML, CSS, JavaScript e frameworks como React.</p>
+      <a href="frontend.html" class="botao-comprar">Comprar</a>
+    </div>
+    <div class="curso">
+      <h3>Curso de Marketing</h3>
+      <p>Domine estratégias de tráfego pago e orgânico para alavancar negócios digitais.</p>
+      <a href="marketing.html" class="botao-comprar">Comprar</a>
     </div>
   </div>
-
-  <footer>
-    © 2025 VEXOR • Plataforma de cursos por Vitor Eduardo (Weny)
-  </footer>
 </body>
 </html>
-<div class="cursos-container">
-
-  <div class="curso">
-    <h2>Curso de Afiliado</h2>
-    <p>Aprenda a vender como afiliado com técnicas reais de marketing digital.</p>
-    <a href="afiliado.html" class="botao">Ver curso</a>
-  </div>
-
-  <div class="curso">
-    <h2>Curso de Frontend</h2>
-    <p>HTML, CSS e JavaScript na prática para criar sites profissionais.</p>
-    <a href="frontend.html" class="botao">Ver curso</a>
-  </div>
-
-  <div class="curso">
-    <h2>Curso de Backend</h2>
-    <p>Node.js, MongoDB, autenticação e APIs REST do zero ao avançado.</p>
-    <a href="backend.html" class="botao">Ver curso</a>
-  </div>
-
-  <div class="curso">
-    <h2>Curso de Edição</h2>
-    <p>Aprenda a editar vídeos como um profissional usando CapCut e Premiere.</p>
-    <a href="edicao.html" class="botao">Ver curso</a>
-  </div>
-
-  <div class="curso">
-    <h2>Curso de Criação de Conteúdo</h2>
-    <p>Domine redes sociais, storytelling, branding e muito mais.</p>
-    <a href="conteudo.html" class="botao">Ver curso</a>
-  </div>
-
-  <div class="curso">
-    <h2>Curso de Vendas Online</h2>
-    <p>Como montar sua loja, vender pelo Instagram, WhatsApp e Mercado Livre.</p>
-    <a href="vendas.html" class="botao">Ver curso</a>
-  </div>
-
-</div>
-<div class="container-cursos">
-  <div class="curso">
-    <h3>Curso de Afiliado</h3>
-    <p>Aprenda como lucrar como afiliado digital e iniciar no marketing de afiliados.</p>
-    <a href="afiliado.html" class="botao-comprar">Comprar</a>
-  </div>
-  <div class="curso">
-    <h3>Curso de Backend</h3>
-    <p>Domine Node.js, MongoDB e crie aplicações robustas com backend real.</p>
-    <a href="backend.html" class="botao-comprar">Comprar</a>
-  </div>
-  <div class="curso">
-    <h3>Curso de Design</h3>
-    <p>Aprenda design gráfico e UI/UX na prática com projetos reais e profissionais.</p>
-    <a href="design.html" class="botao-comprar">Comprar</a>
-  </div>
-  <div class="curso">
-    <h3>Curso de Edição</h3>
-    <p>Aprenda a editar vídeos para TikTok, Reels e YouTube com qualidade profissional.</p>
-    <a href="edicao.html" class="botao-comprar">Comprar</a>
-  </div>
-  <div class="curso">
-    <h3>Curso de Frontend</h3>
-    <p>Crie sites modernos com HTML, CSS, JavaScript e frameworks como React.</p>
-    <a href="frontend.html" class="botao-comprar">Comprar</a>
-  </div>
-  <div class="curso">
-    <h3>Curso de Marketing</h3>
-    <p>Domine estratégias de tráfego pago e orgânico para alavancar negócios digitais.</p>
-    <a href="marketing.html" class="botao-comprar">Comprar</a>
-  </div>
-</div>
