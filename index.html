@@ -5,63 +5,168 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>VEXOR - Plataforma de Cursos</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
-      background-color: #0f0f0f;
-      color: #fff;
+      margin: 0;
       font-family: Arial, sans-serif;
+      background-color: #0d1117;
+      color: #f0f6fc;
+    }
+
+    header {
+      background-color: #161b22;
       padding: 20px;
       text-align: center;
     }
-    header {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 40px;
-      color: #00ffff;
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      color: #58a6ff;
     }
-    .btn {
-      display: block;
-      width: 300px;
-      margin: 10px auto;
-      padding: 15px;
-      background-color: #1a1a1a;
-      border: 2px solid #00ffff;
+
+    .buttons {
+      margin-top: 10px;
+    }
+
+    .buttons button {
+      background-color: #238636;
+      border: none;
       color: white;
-      font-size: 1.2rem;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: background 0.3s, transform 0.2s;
+      padding: 10px 16px;
+      margin: 5px;
+      font-size: 14px;
+      cursor: pointer;
+      border-radius: 6px;
     }
-    .btn:hover {
-      background-color: #00ffff;
-      color: #000;
-      transform: scale(1.05);
+
+    .buttons button:hover {
+      background-color: #2ea043;
     }
+
+    .container {
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background-color: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 12px;
+      padding: 24px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      text-align: center;
+    }
+
+    .card h2 {
+      color: #58a6ff;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .card li::before {
+      content: "✔ ";
+      color: #3fb950;
+    }
+
+    .price {
+      margin: 10px 0;
+      font-weight: bold;
+      font-size: 18px;
+      color: #f0f6fc;
+    }
+
+    .buy-btn {
+      background-color: #1f6feb;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .buy-btn:hover {
+      background-color: #388bfd;
+    }
+
     footer {
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #777;
+      text-align: center;
+      padding: 20px;
+      background-color: #161b22;
+      color: #8b949e;
     }
+
+    a {
+      color: #58a6ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
   </style>
 </head>
 <body>
-  <header>VEXOR</header>
 
-  <a class="btn" href="frontend.html">Curso de Frontend</a>
-  <a class="btn" href="backend.html">Curso de Backend</a>
-  <a class="btn" href="uiux.html">Curso de UI/UX</a>
-  <a class="btn" href="inteligencia.html">Curso de IA</a>
-  <a class="btn" href="anuncios.html">Curso de Anúncios</a>
+  <header>
+    <h1>VEXOR - Plataforma de Cursos</h1>
+    <div class="buttons">
+      <button onclick="alert('Discord: weny_vexor')">Contato (Discord)</button>
+      <button onclick="window.open('https://github.com/vitoreduardoalvesvitorello/vexor')">Plataforma usada</button>
+      <button onclick="alert('Você ainda não comprou nenhum curso.')">Minhas Compras</button>
+    </div>
+  </header>
 
-  <a class="btn" href="https://github.com/seuusuario">Plataforma usada</a>
-  <a class="btn" onclick="alert('Meu Discord: wenydev');">Contato</a>
+  <div class="container">
+    <div class="card">
+      <h2>Curso de Backend</h2>
+      <p>Domine Node.js com projetos reais:</p>
+      <ul>
+        <li>Node.js e Express</li>
+        <li>MongoDB e banco de dados</li>
+        <li>APIs RESTful</li>
+        <li>Autenticação e deploy</li>
+      </ul>
+      <p class="price">Preço: R$ 30,00</p>
+      <button class="buy-btn" onclick="window.location.href='backend.html'">Comprar agora</button>
+    </div>
+
+    <div class="card">
+      <h2>Curso de Frontend</h2>
+      <p>Aprenda a construir interfaces incríveis:</p>
+      <ul>
+        <li>HTML, CSS e JavaScript</li>
+        <li>React moderno</li>
+        <li>Responsividade</li>
+        <li>Design atrativo</li>
+      </ul>
+      <p class="price">Preço: R$ 25,00</p>
+      <button class="buy-btn" onclick="window.location.href='frontend.html'">Comprar agora</button>
+    </div>
+
+    <div class="card">
+      <h2>Curso de Inteligência Artificial</h2>
+      <p>Entre no mundo da IA com Python:</p>
+      <ul>
+        <li>Introdução ao Machine Learning</li>
+        <li>Redes Neurais</li>
+        <li>Chatbots e automações</li>
+        <li>Projetos reais</li>
+      </ul>
+      <p class="price">Preço: R$ 35,00</p>
+      <button class="buy-btn" onclick="window.location.href='ia.html'">Comprar agora</button>
+    </div>
+  </div>
 
   <footer>
-    &copy; 2025 VEXOR - Todos os direitos reservados
+    <p>© 2025 VEXOR. Todos os direitos reservados.</p>
   </footer>
+
 </body>
 </html>
