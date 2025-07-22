@@ -11,6 +11,7 @@
       background-color: #ffffff;
       color: #333;
     }
+
     header {
       background-color: #ff9900;
       padding: 20px;
@@ -19,23 +20,35 @@
       font-weight: bold;
       color: #fff;
     }
+
     .container {
       padding: 30px 20px;
-      max-width: 800px;
+      max-width: 1200px;
       margin: auto;
     }
+
+    .grade-cursos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
     .curso {
       background-color: #f9f9f9;
       padding: 20px;
-      margin-bottom: 20px;
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
       border: 1px solid #ddd;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
+
     .curso h3 {
       margin-top: 0;
       color: #ff9900;
     }
+
     .botao {
       display: inline-block;
       padding: 10px 20px;
@@ -45,7 +58,9 @@
       border-radius: 8px;
       font-weight: bold;
       margin-top: 10px;
+      align-self: flex-start;
     }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -60,22 +75,42 @@
   </header>
 
   <div class="container">
-    <div class="curso">
-      <h3>Curso de Frontend</h3>
-      <p>Aprenda HTML, CSS e JavaScript do zero e crie interfaces modernas.</p>
-      <a href="#" class="botao">Ver curso</a>
-    </div>
+    <div class="grade-cursos">
+      <div class="curso">
+        <h3>Curso de Frontend</h3>
+        <p>Aprenda HTML, CSS e JavaScript do zero e crie interfaces modernas.</p>
+        <a href="#" class="botao">Ver curso</a>
+      </div>
 
-    <div class="curso">
-      <h3>Curso de Backend</h3>
-      <p>Domine Node.js, MongoDB e crie seu próprio servidor profissional.</p>
-      <a href="#" class="botao">Ver curso</a>
-    </div>
+      <div class="curso">
+        <h3>Curso de Backend</h3>
+        <p>Domine Node.js, MongoDB e crie seu próprio servidor profissional.</p>
+        <a href="#" class="botao">Ver curso</a>
+      </div>
 
-    <div class="curso">
-      <h3>Curso de Criação de Bots para Discord</h3>
-      <p>Construa bots com comandos, painéis de ajuda, moderação e mais.</p>
-      <a href="#" class="botao">Ver curso</a>
+      <div class="curso">
+        <h3>Curso de Bots para Discord</h3>
+        <p>Construa bots com comandos, painéis, moderação e IA embutida.</p>
+        <a href="#" class="botao">Ver curso</a>
+      </div>
+
+      <div class="curso">
+        <h3>Curso de Afiliado</h3>
+        <p>Aprenda a vender produtos digitais como afiliado e ganhar comissões.</p>
+        <a href="#" class="botao">Ver curso</a>
+      </div>
+
+      <div class="curso">
+        <h3>Curso de UI/UX Design</h3>
+        <p>Domine a criação de interfaces incríveis e foco na experiência do usuário.</p>
+        <a href="#" class="botao">Ver curso</a>
+      </div>
+
+      <div class="curso">
+        <h3>Curso de Marketing Digital</h3>
+        <p>Aprenda estratégias para divulgar e escalar seus produtos online.</p>
+        <a href="#" class="botao">Ver curso</a>
+      </div>
     </div>
   </div>
 
